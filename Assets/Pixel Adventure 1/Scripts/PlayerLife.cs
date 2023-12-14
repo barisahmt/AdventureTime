@@ -24,7 +24,11 @@ public class PlayerLife : MonoBehaviour
         {
             Die();
         }
+        
+      
     }
+  
+    
 
     private void Die()
     {

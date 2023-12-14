@@ -19,8 +19,10 @@ public class Fan : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("ddf");
-           // collision.gameObject.GetComponent<Rigidbody2D>().MovePosition( new Vector2(collision.transform.position.x , target_transform.position.y));
-            Mathf.Lerp(collision.transform.position.y , target_transform.transform.position.y , fanstrong);
+            collision.gameObject.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.up);
+            //Mathf.Lerp(collision.transform.position.y , target_transform.transform.position.y , fanstrong);
+            
+            Debug.Log(Mathf.Lerp(collision.transform.position.y , target_transform.transform.position.y , fanstrong));
         }
         
     }
